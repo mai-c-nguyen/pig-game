@@ -55,7 +55,7 @@ const textBox = document.getElementById("text-box");
 
 function toggleDarkLightMode(color, navColor, textColor, sunIcon, moonIcon) {
   nav.style.backgroundColor = `rgb(${navColor} ${navColor} ${navColor} / 50%)`;
-  textBox.style.backgroundColor = `rgb(${navColor} ${navColor} ${navColor} / 50%)`;
+  textBox.style.backgroundColor = `rgb(${textColor} ${textColor} ${textColor} / 50%)`;
   toggleIcon.children[0].textContent = `${color} Mode`;
   toggleIcon.children[1].classList.replace(`fa-${sunIcon}`, `fa-${moonIcon}`);
   image1.src = `img/undraw_proud_coder_${color}.svg`;
@@ -93,5 +93,6 @@ if (currentTheme) {
 if (currentTheme === "dark") {
   toggleSwitch.checked = true;
   // darkMode();
+  //toggleDarkLightMode(true);
   toggleDarkLightMode("Dark", 0, 255, "sun", "moon");
 }
